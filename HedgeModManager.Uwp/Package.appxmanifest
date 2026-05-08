@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Package
+  xmlns="http://schemas.microsoft.com/appx/manifest/foundation/windows10"
+  xmlns:uap="http://schemas.microsoft.com/appx/manifest/uap/windows10"
+  xmlns:mp="http://schemas.microsoft.com/appx/2014/phone/manifest"
+  xmlns:rescap="http://schemas.microsoft.com/appx/manifest/foundation/windows10/restrictedcapabilities"
+  IgnorableNamespaces="uap mp rescap">
+
+  <Identity
+    Name="NeverFinishAnything.HedgeModManagerUwp"
+    Publisher="CN=HedgeModManagerUwp"
+    Version="0.1.1.0" />
+  <mp:PhoneIdentity PhoneProductId="f8d4329a-5da7-4a79-a1d7-0a4ecdeaf67e" PhonePublisherId="00000000-0000-0000-0000-000000000000" />
+
+  <Properties>
+    <DisplayName>HedgeModManager UWP</DisplayName>
+    <PublisherDisplayName>HedgeModManager</PublisherDisplayName>
+    <Logo>Assets\StoreLogo.png</Logo>
+  </Properties>
+
+  <Dependencies>
+    <TargetDeviceFamily Name="Windows.Universal" MinVersion="10.0.17763.0" MaxVersionTested="10.0.19041.0" />
+  </Dependencies>
+
+  <Resources>
+    <Resource Language="en-US" />
+  </Resources>
+
+  <Applications>
+    <Application Id="App" Executable="$targetnametoken$.exe" EntryPoint="HedgeModManager.Uwp.App">
+      <uap:VisualElements
+        DisplayName="HedgeModManager UWP"
+        Description="HedgeModManager for Xbox dev mode"
+        BackgroundColor="#1f1f1f"
+        Square150x150Logo="Assets\Square150x150Logo.png"
+        Square44x44Logo="Assets\Square44x44Logo.png" />
+    </Application>
+  </Applications>
+
+  <Capabilities>
+    <Capability Name="internetClient" />
+    <uap:Capability Name="removableStorage" />
+    <rescap:Capability Name="broadFileSystemAccess" />
+  </Capabilities>
+</Package>
